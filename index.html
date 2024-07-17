@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"content="Generating 3D Rehabilitation Human Motion">
+  <meta name="keywords" content="R3D+, DualMDM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R3D+: Generating 3D Rehabilitation Human Motion</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2H78CR2XXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2H78CR2XXE');
+</script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-accordion.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <!-- Carousel -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/carousel.js"></script>
+
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+
+
+  <script src="./static/js/kinematic.js"></script>
+
+
+
+  <!-- Accordions -->
+  <script type="text/javascript" src="./static/js/bulma-accordion.min.js"></script>
+
+  <!-- Plot Scheduler -->
+  <script src="./static/js/schedulers.js"></script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">R3D+: Generating 3D Rehabilitation Human Motion</h1>
+         
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Hadjar Aroua Ferrar</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="n">Maxime Devanne </a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="">Ali Ismail Fawaz</a><sup>2</sup>,
+            </span>
+        
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Ecole Supérieure d'Informatique,</span>
+            <span class="author-block"><sup>2</sup> IRIMAS, Université Haute-alsace,</span>
+   
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+        
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/iivvy/HMG"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Data</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Demo</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <image id="teaser" height="100%" src="./static/images/cover.png"></image>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">📚 Abstract 📚</h2>
+        <div class="content has-text-justified">
+          <p>Abstract goes here</p>
+        </div>
+    
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> SHOW each exercise</h2>
+        
+      </div>
+    </div>
+
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <p class="has-text-centered"><b>Exercise description:</b></p>
+        <p class="has-text-centered">Arm Lifting</p>
+        <div class="columns is-multiline is-centered mt-3">
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause5" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv5" style="width: 100%; aspect-ratio:1/1;"></div>
+        
+          </div>
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause6" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv6" style="width: 100%; aspect-ratio:1/1;"></div>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="has-text-centered"><b>Exercise description:</b></p>
+        <p class="has-text-centered">Arm rotation</p>
+        <div class="columns is-multiline is-centered mt-3">
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause7" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv7" style="width: 100%; aspect-ratio:1/1;"></div>
+            
+          </div>
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause8" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv8" style="width: 100%; aspect-ratio:1/1;"></div>
+         
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="has-text-centered"><b>Exercise description:</b></p>
+        <p class="has-text-centered">Trunk rotation</p>
+        <div class="columns is-multiline is-centered mt-3">
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause9" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv9" style="width: 100%; aspect-ratio:1/1;"></div>
+           
+          </div>
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause10" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv10" style="width: 100%; aspect-ratio:1/1;"></div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="has-text-centered"><b>Exercise description:</b></p>
+        <p class="has-text-centered">Pelvis Rotation</p>
+        <div class="columns is-multiline is-centered mt-3">
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause11" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv11" style="width: 100%; aspect-ratio:1/1;"></div>
+ 
+          </div>
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <button id="playPause12" class="external-link button is-normal is-rounded is-dark">Play</button>
+            <div id="myDiv12" style="width: 100%; aspect-ratio:1/1;"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <section class="accordions container is-max-desktop" style="margin-top: 5rem;">
+    <article class="accordion">
+      <div class="accordion-header p-4">
+        <p>Architecture</p>
+        <button class="toggle" aria-label="toggle"></button>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          <p>
+          The architecture goes here + figure
+          </p>
+          <image height="100%" src=""></image>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</section>
+
+<script>
+
+</script>
+
+
+  
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/iivvy/HMG" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a 
+          </p>
+          <p>
+           License and copyrights 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
